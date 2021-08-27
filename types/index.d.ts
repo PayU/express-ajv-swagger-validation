@@ -53,7 +53,13 @@ export interface format {
 }
 
 export interface FastifyPluginOptions {
-    skiplist?: Array<string>;
+    skiplist?: {
+        get?: Array<string>,
+        post?: Array<string>
+        put?: Array<string>,
+        delete?: Array<string>,
+        patch?: Array<string>,
+    };
 }
 
 export interface ajvValidatorOptions {
